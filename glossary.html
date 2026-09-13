@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glossary — Learn Darija</title>
+  <meta name="description" content="Search every Darija word and phrase taught across all Learn Darija lessons in one place.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rakkas&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <span class="display">Learn Darija</span>
+        <span class="brand-tag">Moroccan Arabic, made simple</span>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html#courses">All Lessons</a>
+        <a href="index.html#progress">My Progress</a>
+        <a href="review.html">Review</a>
+        <a href="glossary.html">Glossary</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="lesson-header">
+    <div class="container">
+      <p class="lesson-breadcrumb"><a href="index.html">Home</a> / Glossary</p>
+      <h1>Glossary</h1>
+      <p class="lesson-subtitle">Every word taught across all written lessons — searchable in one place.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="lesson-intro" style="margin-top:0;">
+      <label for="glossary-search" class="glossary-search-label">Search by Darija or English</label>
+      <input type="search" id="glossary-search" class="glossary-search" placeholder="e.g. “thank you”, “bzaf”, “brother”…" autocomplete="off">
+      <p id="glossary-count" class="glossary-count"></p>
+    </div>
+
+    <div class="vocab-grid" id="glossary-grid"></div>
+    <p id="glossary-empty" style="display:none; text-align:center; color:#6b5c4d;">No words match that search.</p>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Learn Darija — a small, honest project for learning real spoken Moroccan Arabic.</p>
+      <p class="support-line">Find this useful? <a href="https://www.buymeacoffee.com/YOUR-USERNAME-HERE" target="_blank" rel="noopener">Buy me a coffee ☕</a> — totally optional, just here if you want to.</p>
+    </div>
+  </footer>
+
+  <script src="lessons-data.js"></script>
+  <script src="progress.js"></script>
+  <script src="audio.js"></script>
+  <script src="glossary.js"></script>
+</body>
+</html>

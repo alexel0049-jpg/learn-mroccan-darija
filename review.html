@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review, Learn Darija</title>
+  <meta name="description" content="Review all the vocabulary you've learned so far across every Learn Darija lesson, as flashcards or a quiz.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rakkas&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <span class="display">Learn Darija</span>
+        <span class="brand-tag">Moroccan Arabic, made simple</span>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html#courses">All Lessons</a>
+        <a href="index.html#progress">My Progress</a>
+        <a href="review.html">Review</a>
+        <a href="glossary.html">Glossary</a>
+      </nav>
+      <a href="https://paypal.me/YOUR-USERNAME-HERE" target="_blank" rel="noopener" class="support-btn">☕ Support</a>
+    </div>
+  </header>
+
+  <section class="lesson-header">
+    <div class="container">
+      <p class="lesson-breadcrumb"><a href="index.html">Home</a> / Review</p>
+      <h1>Review Your Vocabulary</h1>
+      <p class="lesson-subtitle">Every word from every lesson you've opened, in one place.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div id="review-empty-state" class="lesson-intro" style="display:none;">
+      <p style="margin:0;">
+        You haven't visited any lessons yet, so there's nothing to review.
+        <a href="index.html#courses">Start with a lesson</a> and come back here afterward.
+      </p>
+    </div>
+
+    <div id="review-app" style="display:none;">
+      <div class="review-mode-toggle" role="tablist" aria-label="Review mode">
+        <button type="button" class="review-mode-btn is-active" id="mode-flashcards-btn" role="tab" aria-selected="true">Flashcards</button>
+        <button type="button" class="review-mode-btn" id="mode-quiz-btn" role="tab" aria-selected="false">Quiz</button>
+      </div>
+
+      <section id="flashcards-section">
+        <div class="flashcard-meta">
+          <span id="flashcard-count"></span>
+          <button type="button" class="btn btn-secondary btn-small" id="shuffle-btn">🔀 Shuffle</button>
+        </div>
+        <div class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="Flashcard, press to flip">
+          <div class="flashcard-inner" id="flashcard-inner">
+            <div class="flashcard-face flashcard-front" id="flashcard-front"></div>
+            <div class="flashcard-face flashcard-back" id="flashcard-back"></div>
+          </div>
+        </div>
+        <div class="flashcard-controls">
+          <button type="button" class="btn btn-secondary btn-small" id="flash-prev-btn">← Previous</button>
+          <button type="button" class="btn btn-primary btn-small" id="flash-flip-btn">Flip card</button>
+          <button type="button" class="btn btn-secondary btn-small" id="flash-next-btn">Next →</button>
+        </div>
+      </section>
+
+      <section id="quiz-review-section" style="display:none;">
+        <div class="quiz-box" id="review-quiz-box"></div>
+      </section>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Learn Darija, a small, honest project for learning real spoken Moroccan Arabic.</p>
+    </div>
+  </footer>
+
+  <script src="lessons-data.js"></script>
+  <script src="progress.js"></script>
+  <script src="audio.js"></script>
+  <script src="review.js"></script>
+</body>
+</html>
