@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting…</title>
+  <meta name="robots" content="noindex">
+  <script>
+    // Safety net for any old lesson.html?id=... links: sends the visitor
+    // to the new lessons/<id>.html address instead.
+    (function () {
+      const id = new URLSearchParams(window.location.search).get("id");
+      window.location.replace(id ? "lessons/" + encodeURIComponent(id) + ".html" : "index.html#courses");
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting… if you're not sent automatically, <a href="index.html#courses">go to all lessons</a>.</p>
+</body>
+</html>
